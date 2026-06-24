@@ -265,11 +265,11 @@
       <h3>📋 Regras do Bolão da Uni ⚽💜</h3>
       <ol>
         <li>Para participar, é necessário realizar uma compra no site da Papelaria Unicórnio durante o período da campanha.</li>
-        <li>São válidos os pedidos realizados a partir de <strong>17/06/2026</strong>.</li>
+        <li>São válidos os pedidos realizados a partir de <strong>24/06/2026</strong>.</li>
         <li>Não há valor mínimo de compra para participar.</li>
         <li>No formulário, o participante deverá informar o número de um pedido válido realizado dentro do período da campanha.</li>
         <li>Cada pedido dá direito a um palpite. Em caso de mais de uma resposta ao formulário com o mesmo pedido, será considerado apenas o primeiro palpite enviado.</li>
-        <li>Os palpites poderão ser enviados até <strong>19/06/2026 às 21h30 (horário de Brasília)</strong>, momento de início da partida do Brasil.</li>
+        <li>Os palpites poderão ser enviados até <strong>24/06/2026 às 19h (horário de Brasília)</strong>, momento de início da partida do Brasil.</li>
         <li>Palpites enviados após o horário limite serão desconsiderados.</li>
         <li>Serão considerados vencedores os participantes que acertarem o placar exato da partida.</li>
         <li>O prêmio será um brinde especial da Papelaria Unicórnio.</li>
@@ -299,7 +299,7 @@
 
       <!-- Placar -->
       <div class="field">
-        <label>Placar — Jogo 2</label>
+        <label>Placar — Jogo 3</label>
         <span class="game-label">🏆 Fase de Grupos</span>
 
         <div class="score-row">
@@ -334,19 +334,18 @@
               min="0"
               max="99"
               value="0"
-              aria-label="Gols do Haiti"
+              aria-label="Gols da Escócia"
             />
           </div>
 
           <div class="team">
-            <!-- Bandeira do Haiti -->
+            <!-- Bandeira da Escócia (Saltire) -->
             <svg class="flag" viewBox="0 0 52 36" xmlns="http://www.w3.org/2000/svg">
-              <rect width="52" height="18" fill="#00209F"/>
-              <rect y="18" width="52" height="18" fill="#D21034"/>
-              <rect x="20" y="13" width="12" height="10" fill="white" opacity="0.9" rx="1"/>
-              <rect x="24" y="11" width="4" height="14" fill="white" opacity="0.9"/>
+              <rect width="52" height="36" fill="#0065BD"/>
+              <line x1="0" y1="0" x2="52" y2="36" stroke="white" stroke-width="7"/>
+              <line x1="52" y1="0" x2="0" y2="36" stroke="white" stroke-width="7"/>
             </svg>
-            <span class="team-name">Haiti</span>
+            <span class="team-name">Escócia</span>
           </div>
         </div>
         <span class="error-msg" id="placarError">
@@ -364,8 +363,8 @@
   <script>
     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbztcPRBmzjrEAkapEIfP0VFr8EwTMxvNtm0z86SocUkssuLnfwjWqyH5uAzyqunkE7iCg/exec';
 
-    // Prazo: 19/06/2026 às 21h30 (horário de Brasília = UTC-3)
-    const PRAZO = new Date('2026-06-20T00:30:00Z'); // 21h30 BRT = 00h30 UTC+1dia
+    // Prazo: 24/06/2026 às 19h00 (horário de Brasília = UTC-3)
+    const PRAZO = new Date('2026-06-24T22:00:00Z'); // 19h BRT = 22h UTC
 
     function prazoEncerrado() {
       return new Date() > PRAZO;
@@ -385,7 +384,7 @@
           <p style="font-size: 17px; font-weight: 800; margin-bottom: 8px;">Prazo encerrado</p>
           <p style="font-size: 14px; color: #b91c1c; line-height: 1.5;">
             As inscrições para o Bolão da Uni encerraram em<br>
-            <strong>19/06/2026 às 21h30 (horário de Brasília)</strong>.
+            <strong>24/06/2026 às 19h (horário de Brasília)</strong>.
           </p>
         </div>
       `;
@@ -454,7 +453,7 @@
         placar: `${golsBrasil} x ${golsHaiti}`,
         golsBrasil: Number(golsBrasil),
         golsHaiti: Number(golsHaiti),
-        jogo: 'Brasil x Haiti',
+        jogo: 'Brasil x Escócia',
         timestamp: new Date().toISOString(),
       };
 
