@@ -265,11 +265,11 @@
       <h3>📋 Regras do Bolão da Uni ⚽💜</h3>
       <ol>
         <li>Para participar, é necessário realizar uma compra no site da Papelaria Unicórnio durante o período da campanha.</li>
-        <li>São válidos os pedidos realizados a partir de <strong>29/06/2026</strong>.</li>
+        <li>São válidos os pedidos realizados a partir de <strong>05/07/2026</strong>.</li>
         <li>Não há valor mínimo de compra para participar.</li>
         <li>No formulário, o participante deverá informar o número de um pedido válido realizado dentro do período da campanha.</li>
         <li>Cada pedido dá direito a um palpite. Em caso de mais de uma resposta ao formulário com o mesmo pedido, será considerado apenas o primeiro palpite enviado.</li>
-        <li>Os palpites poderão ser enviados até <strong>29/06/2026 às 14h (horário de Brasília)</strong>, momento de início da partida do Brasil.</li>
+        <li>Os palpites poderão ser enviados até <strong>05/07/2026 às 17h (horário de Brasília)</strong>, momento de início da partida do Brasil.</li>
         <li>Palpites enviados após o horário limite serão desconsiderados.</li>
         <li>Serão considerados vencedores os participantes que acertarem o placar exato da partida.</li>
         <li>O prêmio será um brinde especial da Papelaria Unicórnio.</li>
@@ -299,8 +299,8 @@
 
       <!-- Placar -->
       <div class="field">
-        <label>Placar — Jogo 4</label>
-        <span class="game-label">⚔️ Segunda Fase</span>
+        <label>Placar — Jogo 5</label>
+        <span class="game-label">⚔️ Oitavas de Final</span>
 
         <div class="score-row">
           <div class="team">
@@ -334,17 +334,20 @@
               min="0"
               max="99"
               value="0"
-              aria-label="Gols do Japão"
+              aria-label="Gols da Noruega"
             />
           </div>
 
           <div class="team">
-            <!-- Bandeira do Japão (Hinomaru) -->
+            <!-- Bandeira da Noruega -->
             <svg class="flag" viewBox="0 0 52 36" xmlns="http://www.w3.org/2000/svg">
-              <rect width="52" height="36" fill="#fff"/>
-              <circle cx="26" cy="18" r="10.5" fill="#BC002D"/>
+              <rect width="52" height="36" fill="#EF2B2D"/>
+              <rect x="12" y="0" width="10" height="36" fill="#fff"/>
+              <rect x="0" y="13" width="52" height="10" fill="#fff"/>
+              <rect x="14" y="0" width="6" height="36" fill="#002868"/>
+              <rect x="0" y="15" width="52" height="6" fill="#002868"/>
             </svg>
-            <span class="team-name">Japão</span>
+            <span class="team-name">Noruega</span>
           </div>
         </div>
         <span class="error-msg" id="placarError">
@@ -362,8 +365,8 @@
   <script>
     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbztcPRBmzjrEAkapEIfP0VFr8EwTMxvNtm0z86SocUkssuLnfwjWqyH5uAzyqunkE7iCg/exec';
 
-    // Prazo: 29/06/2026 às 14h00 (horário de Brasília = UTC-3)
-    const PRAZO = new Date('2026-06-29T17:00:00Z'); // 14h BRT = 17h UTC
+    // Prazo: 05/07/2026 às 17h00 (horário de Brasília = UTC-3)
+    const PRAZO = new Date('2026-07-05T20:00:00Z'); // 17h BRT = 20h UTC
 
     function prazoEncerrado() {
       return new Date() > PRAZO;
@@ -383,7 +386,7 @@
           <p style="font-size: 17px; font-weight: 800; margin-bottom: 8px;">Prazo encerrado</p>
           <p style="font-size: 14px; color: #b91c1c; line-height: 1.5;">
             As inscrições para o Bolão da Uni encerraram em<br>
-            <strong>29/06/2026 às 14h (horário de Brasília)</strong>.
+            <strong>05/07/2026 às 17h (horário de Brasília)</strong>.
           </p>
         </div>
       `;
@@ -452,7 +455,7 @@
         placar: `${golsBrasil} x ${golsHaiti}`,
         golsBrasil: Number(golsBrasil),
         golsHaiti: Number(golsHaiti),
-        jogo: 'Brasil x Japão',
+        jogo: 'Brasil x Noruega',
         timestamp: new Date().toISOString(),
       };
 
